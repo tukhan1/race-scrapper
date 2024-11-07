@@ -1,0 +1,25 @@
+# Игнорировать виртуальные окружения
+venv/
+ENV/
+.venv/
+.env/
+
+# Кэш и временные файлы
+pycache/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+
+# Конфигурационные файлы
+*.env
+*.DS_Store
+*.vscode/
+.idea/
+
+# Логи
+*.log
+
+# Системные файлы
+Thumbs.db
+.DS_Store
