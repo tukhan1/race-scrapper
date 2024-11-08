@@ -1,13 +1,14 @@
-import time
 import re
+import time
+from Model.DTO import Racer
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
-from DTO import Racer
+
 
 racers = []
 driver = webdriver.Firefox()
-# ТУТ ССЫЛКА НА ГОНКУ
+# ТУТ ССЫЛКА НА ГОНКУs
 # ТУТ ССЫЛКА НА ГОНКУ
 # ТУТ ССЫЛКА НА ГОНКУ
 # ТУТ ССЫЛКА НА ГОНКУ
