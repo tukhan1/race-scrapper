@@ -9,8 +9,6 @@ def choose_driver():
         if racer.name == selected_driver:
             print("Success")
             interval_to_prev, interval_to_next = calculate_intervals_after_pitstop(
-                # СЮДА ВСТАВИТЬ ВРЕМЯ ПИТСТОПА                           |
-                # СЮДА ВСТАВИТЬ ВРЕМЯ ПИТСТОПА                           |
                 racer, drivers=Model.data_parser.racers, pit_stop_time=32.0)
             calculate_pit_stop_decision(interval_to_next, interval_to_prev)
             return
@@ -19,7 +17,6 @@ def choose_driver():
     return
 
 def calculate_intervals_after_pitstop(target_driver, drivers, pit_stop_time):
-    
     current_index = drivers.index(target_driver)
     counter = current_index
     remaining_pit_time = pit_stop_time
