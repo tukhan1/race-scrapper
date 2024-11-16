@@ -5,9 +5,9 @@ from selenium.webdriver.common.by import By
 
 racers = []
 
-def fill_drivers_info():
+def fill_drivers_info(race_url: str):
     with webdriver.Chrome() as browser:
-        browser.get("")
+        browser.get(race_url)
         browser.set_page_load_timeout(5)
         cells = browser.find_elements(By.XPATH, "//*[starts-with(@id, 'comp_К')]")
         for cell in cells:

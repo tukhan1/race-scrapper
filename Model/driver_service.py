@@ -8,15 +8,15 @@ def choose_driver():
     for racer in Model.data_parser.racers:
         if racer.name == selected_driver:
             print("Success")
-            interval_to_prev, interval_to_next = calculate_intervals_after_pitstop(
+            interval_to_prev, interval_to_next = __calculate_intervals_after_pitstop(
                 racer, drivers=Model.data_parser.racers, pit_stop_time=32.0)
-            calculate_pit_stop_decision(interval_to_next, interval_to_prev)
+            __calculate_pit_stop_decision(interval_to_next, interval_to_prev)
             return
     print("Error: ГОНЩИК НЕ НАЙДЕН ПРОБУЙ ЕЩЕ")
     choose_driver()
     return
 
-def calculate_intervals_after_pitstop(target_driver, drivers, pit_stop_time):
+def __calculate_intervals_after_pitstop(target_driver, drivers, pit_stop_time):
     current_index = drivers.index(target_driver)
     counter = current_index
     remaining_pit_time = pit_stop_time
@@ -32,7 +32,7 @@ def calculate_intervals_after_pitstop(target_driver, drivers, pit_stop_time):
             interval_to_next = next_driver_interval - interval_to_prev
             return interval_to_prev, interval_to_next
         
-def calculate_pit_stop_decision(interval_to_next, interval_to_prev):
+def __calculate_pit_stop_decision(interval_to_next, interval_to_prev):
     if interval_to_next > 5 and interval_to_prev > 3:
         print("\033[32mPIT STOP AVALIBLE\033[0m")
         print("Интервал до машины спереди: ", round(interval_to_next, 2))
